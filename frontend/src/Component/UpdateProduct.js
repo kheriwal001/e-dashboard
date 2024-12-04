@@ -11,7 +11,7 @@ const UpdateProduct = () => {
     const navigate = useNavigate();
 
     const getProductDetails = useCallback(async () => {
-        let result = await fetch(`https://smartcart-orpin.vercel.app/product/${params.id}`,{
+        let result = await fetch(`https://e-dashboard-one.vercel.app/product/${params.id}`,{
             headers:{
                     authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
             }
@@ -29,7 +29,7 @@ const UpdateProduct = () => {
     },[getProductDetails]);
 
     const updateProduct = async () => {
-        let result = await fetch(`https://smartcart-orpin.vercel.app/product/${params.id}`, {
+        let result = await fetch(`https://e-dashboard-one.vercel.app/product/${params.id}`, {
             method: 'PUT',
             body: JSON.stringify({ name, price, category, company }),
             headers: {

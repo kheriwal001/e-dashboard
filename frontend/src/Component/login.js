@@ -17,7 +17,7 @@ const Login = () => {
         event.preventDefault();
 
         try {
-            const response = await fetch("https://smartcart-orpin.vercel.app/login", { 
+            const response = await fetch("https://e-dashboard-one.vercel.app/login", { 
                 method: 'POST', 
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password })

@@ -27,7 +27,7 @@ const SignUp = () => {
         setError("");
 
         try {
-            const response = await fetch("https://smartcart-orpin.vercel.app/register", {
+            const response = await fetch("https://e-dashboard-one.vercel.app/register", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ name, email, password })

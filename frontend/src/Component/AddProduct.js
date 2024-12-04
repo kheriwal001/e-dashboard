@@ -18,7 +18,7 @@ const AddProduct = () => {
         const userID = JSON.parse(localStorage.getItem('user'))._id;
 
         // Send product data to the backend
-        let result = await fetch("https://smartcart-orpin.vercel.app/add-product", {
+        let result = await fetch("https://e-dashboard-one.vercel.app/add-product", {
             method: 'POST',
             body: JSON.stringify({ name, price, category, company, userID }),
             headers: {

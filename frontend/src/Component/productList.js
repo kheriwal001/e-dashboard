@@ -10,7 +10,7 @@ const ProductList = () => {
 
     const getProducts = async () => {
         try {
-            let result = await fetch('https://smartcart-orpin.vercel.app/products',{
+            let result = await fetch('https://e-dashboard-one.vercel.app/products',{
                 headers:{
                     authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
                 }
@@ -24,7 +24,7 @@ const ProductList = () => {
 
     const deleteProduct = async (_id) => {
         console.warn(_id);
-        let result = await fetch(`https://smartcart-orpin.vercel.app/product/${_id}`, {
+        let result = await fetch(`https://e-dashboard-one.vercel.app/product/${_id}`, {
             method: 'DELETE',
             headers:{
                     authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
@@ -40,7 +40,7 @@ const ProductList = () => {
         let key = event.target.value;
         if (key) {
             try {
-                let result = await fetch(`https://smartcart-orpin.vercel.app/search/${key}`,{
+                let result = await fetch(`https://e-dashboard-one.vercel.app/search/${key}`,{
                     headers:{
                     authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
                 }
